@@ -18,7 +18,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 3rem;
     font-weight: 700;
-    color: #4A90E2; /* A nice blue shade */
+    color: #4A90E2; 
     text-align: center;
     margin: 20px 0;
     padding: 20px;
@@ -237,7 +237,7 @@ body {
     z-index: 9999;
     animation: slideIn 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   }
-  /* theme.css: put at top or in todocss.css */
+ 
 :root {
   --bg: #f5f7fa;
   --panel-bg: #fff;
@@ -258,7 +258,7 @@ body {
   --calendar: #4285f4;
 }
 
-/* Dark theme */
+
 :root[data-theme="dark"] {
   --bg: #0f172a;
   --panel-bg: #0b1220;
@@ -279,14 +279,14 @@ body {
   --calendar: #60a5fa;
 }
 
-/* Respect system theme by default */
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
     --bg: #0f172a;
     --panel-bg: #0b1220;
     --text: #e2e8f0;
-    /* (duplicate dark set as above, or rely on data-theme switch) */
+    
   }
 }
 
@@ -405,10 +405,10 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
   margin: 0 0 2px 0;
 }
 
-/* Optional: if the label is in a flex row with avatar, prevent wrapping */
+
 .user-text .welcome { white-space: nowrap; }
 
-/* Optional high-contrast focus (only if the element can receive focus) */
+
 .welcome:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px var(--ring, #6ea8fe);
@@ -455,7 +455,7 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
     0 0 0 3px color-mix(in oklab, var(--brand, #4f8cff) 60%, white 20%),
     0 1px 2px rgba(0,0,0,.08);
 }
-/* Container aligns avatar and text nicely inside the bar */
+
 .auth-bar .user {
   display: flex;
   align-items: center;
@@ -463,12 +463,12 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
   min-width: 0;
 }
 
-/* Avatar image */
+
 .avatar {
-  width: 48px;                 /* tweak to 40–56px as desired */
+  width: 48px;                 
   height: 48px;
-  border-radius: 12px;         /* rounded-square look; use 50% for circle */
-  object-fit: cover;           /* crop to fill without distortion */
+  border-radius: 12px;         
+  object-fit: cover;           
   object-position: center;
   display: block;
   border: 1px solid var(--border, #cbd5e1);
@@ -476,23 +476,20 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
   background: var(--surface-2, #f3f4f6);
 }
 
-/* Compact variant for tighter spaces */
+
 .auth-bar.compact .avatar {
   width: 40px;
   height: 40px;
   border-radius: 10px;
 }
 
-/* Circle style alternative (uncomment if preferred) */
-/* .avatar { border-radius: 50%; } */
 
-/* High-contrast focus when avatar is focusable (e.g., wrapped in a button/link) */
 .avatar:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px var(--ring, #6ea8fe);
 }
 
-/* Fallback initials badge if no image: use a span with class="avatar-initial" */
+
 .avatar-initial {
   width: 48px;
   height: 48px;
@@ -509,7 +506,7 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
   border: 1px solid transparent;
 }
 
-/* Dark theme tweaks (optional) */
+
 :root[data-theme="dark"] .avatar {
   border-color: var(--border, #475569);
   box-shadow: 0 1px 2px rgba(0,0,0,.4);
@@ -529,7 +526,7 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
   color: var(--text-strong, #e2e8f0);
 }
 
-/* Optional: only if this element can be focused (e.g., wrapped in a link/button) */
+
 .name:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px var(--ring, #6ea8fe);
@@ -823,7 +820,7 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
 }
 .kv strong { display: block; color: var(--text-strong); }
 .kv span { color: var(--text-muted); font-weight: 500; }
-/* ---------- Page background (eye‑catchy gradient + vignette) ---------- */
+
 .app-bg {
   position: fixed;
   inset: 0;
@@ -846,7 +843,7 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
   opacity: .5;
 }
 
-/* Dark theme adjustments */
+
 :root[data-theme="dark"] .app-bg {
   background:
     radial-gradient(1400px 800px at 10% -10%, color-mix(in oklab, var(--brand, #60a5fa) 32%, transparent) 0%, transparent 60%),
@@ -855,7 +852,7 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
 }
 :root[data-theme="dark"] .vignette { opacity: .65; }
 
-/* ---------- Glass card for the app container ---------- */
+
 .todo-list {
   position: relative;
   max-width: 560px;
@@ -873,7 +870,7 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
   transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
 }
 
-/* Fallback when backdrop-filter unsupported */
+
 @supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
   .todo-list {
     background: color-mix(in oklab, var(--surface, #fff) 88%, rgba(255,255,255,.65));
@@ -888,7 +885,7 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
     inset 0 1px 0 rgba(255,255,255,.3);
 }
 
-/* Title glow */
+
 .Head {
   color: #fff;
   background: linear-gradient(135deg, var(--head-grad-from, #6B73FF), var(--head-grad-to, #000DFF));
@@ -902,7 +899,7 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
   margin-bottom: 10px;
 }
 
-/* ---------- Buttons polish ---------- */
+
 .Add-button,
 .btn-outline,
 .calendar-button,
@@ -928,34 +925,34 @@ li:hover { box-shadow: 0 4px 16px var(--li-hover); }
   transform: translateY(0);
 }
 
-/* ---------- Feature list chips (pre‑login hero) ---------- */
+
 .feature-list li {
   background: color-mix(in oklab, var(--surface, #fff) 70%, transparent);
   border: 1px solid color-mix(in oklab, var(--border, #cbd5e1) 80%, transparent);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
 }
 
-/* ---------- Global layout helpers ---------- */
+
 body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
 }
 
-/* Optional container padding for mobile */
+
 @media (max-width: 560px) {
   .todo-list { margin: 36px 12px; padding: 22px 18px; }
 }
-/* Full-screen signed-out container */
+
 .signedout-screen {
-  min-height: 100svh;           /* full viewport height, safe on mobile */
-  display: grid;                /* easy centering */
-  place-items: center;          /* center both axes */
-  padding: 24px;                /* breathing room on small screens */
+  min-height: 100svh;           
+  display: grid;                
+  place-items: center;          
+  padding: 24px;                
   position: relative;
 }
 
-/* Optional: use the same immersive background from earlier */
+
 .signedout-screen::before {
   content: "";
   position: fixed;
@@ -975,14 +972,13 @@ body {
     linear-gradient(135deg, #0b1220, #0f172a);
 }
 
-/* Centered hero card sizing inside full-screen */
+
 .signedout-screen .hero {
   width: min(720px, 100%);
-  margin: 0;                    /* grid centering handles spacing */
+  margin: 0;                    
 }
 
-/* Keep the old .todo-list card style for the signed-in view only */
-/* Full-screen stage */
+
 .signedout-screen {
   min-height: 100svh;
   display: grid;
@@ -993,7 +989,7 @@ body {
   isolation: isolate;
 }
 
-/* Gradient field + vignette */
+
 .signedout-screen::before,
 .signedout-screen::after {
   content: "";
@@ -1015,7 +1011,7 @@ body {
   opacity: .5;
 }
 
-/* Dark theme background */
+
 :root[data-theme="dark"] .signedout-screen::before {
   background:
     radial-gradient(1400px 800px at 10% -10%, color-mix(in oklab, var(--brand, #60a5fa) 32%, transparent) 0%, transparent 60%),
@@ -1024,7 +1020,7 @@ body {
 }
 :root[data-theme="dark"] .signedout-screen::after { opacity: .65; }
 
-/* Glassy hero card */
+
 .signedout-screen .hero {
   width: min(780px, 100%);
   padding: 24px 20px 18px;
@@ -1055,7 +1051,7 @@ body {
     inset 0 1px 0 rgba(255,255,255,.3);
 }
 
-/* Headline polish */
+
 .hero-title {
   margin: 6px 0 8px;
   font: 900 1.9rem/1.15 var(--font-ui, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif);
@@ -1068,7 +1064,7 @@ body {
 }
 .hero-sub { margin: 0 auto 14px; max-width: 42ch; color: var(--text-muted, #6b7280); font-weight: 600; }
 
-/* Feature grid */
+
 .feature-list {
   list-style: none; padding: 0; margin: 0 0 16px;
   display: grid; gap: 10px; grid-template-columns: 1fr;
@@ -1085,7 +1081,7 @@ body {
 .fi.fi-check { width: 18px; height: 18px; border-radius: 4px; background: linear-gradient(90deg, var(--brand, #4f8cff), var(--brand-2, #38d39f)); box-shadow: inset 0 0 0 2px rgba(255,255,255,.65); position: relative; }
 .fi.fi-check::after { content: ""; position: absolute; left: 4px; top: 1px; width: 6px; height: 10px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
 
-/* CTAs */
+
 .cta-primary, .cta-secondary { transition: background-color .18s, border-color .18s, transform .06s, box-shadow .18s; }
 .cta-primary {
   display: inline-flex; align-items: center; gap: 10px;
@@ -1104,7 +1100,7 @@ body {
 }
 .cta-secondary:hover { background: color-mix(in oklab, var(--brand, #4f8cff) 12%, transparent); }
 .cta-secondary:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--ring, #6ea8fe); }
-/* Row layout */
+
 .new-task {
   display: grid;
   grid-template-columns: 1.2fr .9fr .8fr .7fr auto;
@@ -1118,7 +1114,7 @@ body {
   .new-task .Add-button { grid-column: 1 / -1; }
 }
 
-/* Shared field look (glass + subtle border) */
+
 .new-task input[type="text"],
 .new-task input[type="date"],
 .new-task input[type="time"],
@@ -1144,7 +1140,7 @@ body {
   font-weight: 500;
 }
 
-/* Focus and hover states */
+
 .new-task input[type="text"]:hover,
 .new-task input[type="date"]:hover,
 .new-task input[type="time"]:hover,
@@ -1161,7 +1157,7 @@ body {
   box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand, #4f8cff) 50%, white 25%);
 }
 
-/* Duration select caret */
+
 .new-task select {
   background-image:
     linear-gradient(45deg, transparent 50%, var(--text-muted, #6b7280) 50%),
@@ -1172,7 +1168,7 @@ body {
   padding-right: 28px;
 }
 
-/* Add button matches brand gradient with motion */
+
 .new-task .Add-button {
   padding: 11px 18px;
   border-radius: 12px;
@@ -1190,7 +1186,7 @@ body {
 }
 .new-task .Add-button:active { transform: translateY(0); }
 
-/* Dark theme tweaks */
+
 :root[data-theme="dark"] .new-task input[type="text"],
 :root[data-theme="dark"] .new-task input[type="date"],
 :root[data-theme="dark"] .new-task input[type="time"],
@@ -1201,7 +1197,7 @@ body {
     0 1px 2px rgba(0,0,0,.35),
     inset 0 1px 0 rgba(255,255,255,.06);
 }
-/* Animated gradient text for the main title */
+
 .Head {
   font-weight: 900;
   letter-spacing: .6px;
@@ -1222,18 +1218,18 @@ body {
 .ji{
   color:#000DFF;
 }
-/* Full-viewport stage for signed-in view */
+
 .signedin-screen {
   min-height: 100svh;
   position: relative;
   padding: 24px 12px;
   display: grid;
-  place-items: start center;  /* content near top but centered horizontally */
+  place-items: start center;  
   overflow: hidden;
   isolation: isolate;
 }
 
-/* Gradient field + vignette using pseudo elements */
+
 .signedin-screen::before,
 .signedin-screen::after {
   content: "";
@@ -1258,7 +1254,7 @@ body {
   opacity: .45;
 }
 
-/* Dark theme variant */
+
 :root[data-theme="dark"] .signedin-screen::before {
   background:
     radial-gradient(1000px 600px at 15% -10%, color-mix(in oklab, var(--brand, #60a5fa) 30%, transparent) 0%, transparent 60%),
@@ -1267,15 +1263,15 @@ body {
 }
 :root[data-theme="dark"] .signedin-screen::after { opacity: .6; }
 
-/* Gentle motion */
+
 @keyframes signedBgDrift {
   0%   { transform: translate3d(0,0,0) scale(1); }
   100% { transform: translate3d(-2%, -1.5%, 0) scale(1.02); }
 }
 
-/* Optional: widen the app card slightly on signed-in view */
+
 .signedin-screen .todo-list {
-  max-width: 680px;           /* a bit wider than default */
+  max-width: 680px;           
   backdrop-filter: saturate(140%) blur(14px);
   -webkit-backdrop-filter: saturate(140%) blur(14px);
   background: color-mix(in oklab, var(--surface, #fff) 62%, transparent);
@@ -1286,7 +1282,7 @@ body {
     inset 0 1px 0 rgba(255,255,255,.25);
 }
 
-/* Accent dividers/headings inside signed-in view */
+
 .signedin-screen .Head {
   margin-top: 10px;
   background: linear-gradient(90deg, var(--head-grad-from, #6B73FF), var(--head-grad-to, #000DFF), var(--brand-2, #38d39f));
@@ -1294,47 +1290,46 @@ body {
   background-clip: text;
   color: transparent;
   text-shadow: 0 6px 18px color-mix(in oklab, var(--brand, #4f8cff) 38%, transparent);
-  animation: titleGlow 6s ease-in-out infinite; /* reuse earlier keyframes if present */
+  animation: titleGlow 6s ease-in-out infinite;
 }
 .dateo{
   background-color:blue;
 }
-/* fallback for engines that honor color on <input type="date"> */
-/* pick a dark‑mode friendly teal */
+
 :root[data-theme="dark"] input[type="date"].dateo {
-  color: #2dd4bf; /* aqua 400-ish */
+  color: #2dd4bf; 
 }
 
-/* Chrome/Edge/Safari: style the editable date parts */
+
 :root[data-theme="dark"] input[type="date"].dateo::-webkit-datetime-edit,
 :root[data-theme="dark"] input[type="date"].dateo::-webkit-datetime-edit-text,
 :root[data-theme="dark"] input[type="date"].dateo::-webkit-datetime-edit-month-field,
 :root[data-theme="dark"] input[type="date"].dateo::-webkit-datetime-edit-day-field,
 :root[data-theme="dark"] input[type="date"].dateo::-webkit-datetime-edit-year-field {
-  color: #2dd4bf;  /* teal readable on dark */
+  color: #2dd4bf;  
 }
-/* Dark theme text color */
+
 :root[data-theme="dark"] input[type="text"].dateo,
 :root[data-theme="dark"] input[type="text"].tasko {
-  color: #2dd4bf; /* teal that reads well on dark */
+  color: #2dd4bf; 
 }
 
-/* Placeholder color (modern browsers) */
+
 :root[data-theme="dark"] input[type="text"].tasko::placeholder {
   color: #2dd4bf;
-  opacity: 1; /* ensure full opacity in Firefox */
+  opacity: 1; 
 }
 
-/* Optional legacy Edge (EdgeHTML 12–18) */
+
 :root[data-theme="dark"] input[type="text"].tasko::-ms-input-placeholder { 
   color: #2dd4bf;
 }
-/* base text color (works across engines to varying degrees) */
+
 :root[data-theme="dark"] input[type="time"].timeo {
-  color: #2dd4bf; /* teal readable on dark */
+  color: #2dd4bf; 
 }
 
-/* Chrome/Edge/Safari: style internal time fields */
+
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-datetime-edit,
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-datetime-edit-text,
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-datetime-edit-hour-field,
@@ -1344,17 +1339,17 @@ body {
   color: #2dd4bf;
 }
 
-/* optional: hide spinners/clear if your design prefers */
+
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-inner-spin-button,
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-clear-button {
   display: none;
 }
-/* base text color (works across engines to varying degrees) */
+
 :root[data-theme="dark"] input[type="time"].timeo {
-  color: #2dd4bf; /* teal readable on dark */
+  color: #2dd4bf; 
 }
 
-/* Chrome/Edge/Safari: style internal time fields */
+
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-datetime-edit,
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-datetime-edit-text,
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-datetime-edit-hour-field,
@@ -1364,24 +1359,24 @@ body {
   color: #2dd4bf;
 }
 
-/* optional: hide spinners/clear if your design prefers */
+
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-inner-spin-button,
 :root[data-theme="dark"] input[type="time"].timeo::-webkit-clear-button {
   display: none;
 }
 :root[data-theme="dark"] select.durationo {
-  color: #2dd4bf;           /* text in the closed select */
+  color: #2dd4bf;           
   background-color: var(--panel-bg, #0b1220);
 }
 
-/* Option text color (most browsers inherit; this enforces it if needed) */
+
 :root[data-theme="dark"] select.durationo option {
   color: #2dd4bf;
   background-color: var(--panel-bg, #0b1220);
 }
 .btn-outline {
-  --btn-red: #d32f2f;         /* accessible danger red */
-  --btn-red-hover: #c62828;   /* darker hover */
+  --btn-red: #d32f2f;         
+  --btn-red-hover: #c62828;   
   color: var(--btn-red);
   background: transparent;
   border: 2px solid var(--btn-red);
@@ -1398,10 +1393,10 @@ body {
 }
 
 .btn-outline:focus-visible {
-  outline: 3px solid #ffffff;           /* inner */
-  box-shadow: 0 0 0 3px var(--btn-red); /* outer focus ring */
+  outline: 3px solid #ffffff;           
+  box-shadow: 0 0 0 3px var(--btn-red); 
 }
-/* Badge */
+
 .hero-badge{
   display:inline-block;
   padding:6px 12px;
@@ -1418,7 +1413,7 @@ body {
   border:1px solid rgba(255,255,255,.35);
 }
 
-/* Brand title */
+
 .hero-brand{
   margin:14px 0 2px;
   font-weight:800;
@@ -1430,10 +1425,10 @@ body {
   
   background-clip:text;
   color:transparent;
-  text-shadow: 0 0 0 rgba(0,0,0,0); /* keeps crisp edges */
+  text-shadow: 0 0 0 rgba(0,0,0,0); 
 }
 
-/* Optional: focus styles for keyboard users */
+
 .hero-badge:focus-visible, .hero-brand:focus-visible{
   outline:3px solid #fff;
   outline-offset:2px;

@@ -1,4 +1,3 @@
-// useGoogleCalendar.js
 import { useEffect, useState } from "react";
 const gapi = window.gapi;
 
